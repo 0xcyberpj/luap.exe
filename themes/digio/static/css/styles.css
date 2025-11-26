@@ -806,7 +806,7 @@ html {
 body {
   color: #ffffff;
   font-family: 'Fira Code', monospace;
-  line-height: 1.5;
+  line-height: 1.7;
   margin: 0;
   max-width: none;
   font-size: 14px;
@@ -976,24 +976,29 @@ nav ul li::before {
 
 .nav-menu {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1.5rem;
   padding: 0;
   margin: 0;
   justify-content: center;
   font-size: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-menu li {
+  flex: 0 0 auto;
+  list-style: none;
 }
 
 @media (max-width: 640px) {
   .nav-menu {
-    flex-wrap: nowrap;
-    overflow-x: auto;
     justify-content: flex-start;
     gap: 1rem;
-  }
-
-  .nav-menu li {
-    white-space: nowrap;
   }
 }
 
@@ -1004,6 +1009,7 @@ nav ul li::before {
   position: relative;
   padding-bottom: 0.3rem;
   transition: color 150ms ease;
+  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -1064,17 +1070,24 @@ nav ul li::before {
   margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.75rem;
+}
+
+.home-content > * {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .home-content h2 {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 1.85rem;
+  letter-spacing: 0.08em;
 }
 
 .home-content ul {
   margin: 0;
   padding-left: 1.5rem;
+  line-height: 1.8;
 }
 
 .home-quotes {
