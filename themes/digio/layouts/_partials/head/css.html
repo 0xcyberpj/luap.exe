@@ -1,9 +1,12 @@
-{{- with resources.Get "css/main.css" }}
+{{- $asset := resources.Get "css/main.css" }}
+{{- if $asset }}
   {{- if hugo.IsDevelopment }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
+    <link rel="stylesheet" href="{{ $asset.RelPermalink }}">
   {{- else }}
-    {{- with . | minify | fingerprint }}
+    {{- with $asset | minify | fingerprint }}
       <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     {{- end }}
   {{- end }}
+{{- else }}
+  <link rel="stylesheet" href="/css/styles.css">
 {{- end }}
