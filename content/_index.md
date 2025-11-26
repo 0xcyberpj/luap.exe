@@ -17,9 +17,7 @@ I needed a quiet place on the internet to stash experiments, debug transcripts, 
 
 ## Fresh writing
 
-- [philosophy of maintenance](/write/philosophy-of-maintenance)
-- [wandering currents](/write/wandering-currents)
-- [night letters to future me](/write/night-letters)
+- [placeholder post title](/write/placeholder)
 
 ## What you’ll find
 
