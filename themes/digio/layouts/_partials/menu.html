@@ -24,7 +24,6 @@
     {{- range .menuEntries }}
       {{- $url := .URL }}
       {{- if not (or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://") ) }}
-        {{- $url = strings.TrimPrefix $url "/" }}
         {{- $url = $url | relLangURL }}
       {{- end }}
       {{- $attrs := dict "href" $url }}

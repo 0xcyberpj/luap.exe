@@ -986,14 +986,12 @@ nav ul li::before {
 
 @media (max-width: 640px) {
   .nav-menu {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .nav-menu li {
-    white-space: nowrap;
+  .nav-link {
+    letter-spacing: 0.15em;
   }
 }
 
