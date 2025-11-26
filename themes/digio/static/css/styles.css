@@ -984,6 +984,17 @@ nav ul li::before {
   font-size: 1rem;
 }
 
+@media (max-width: 640px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .nav-link {
+    letter-spacing: 0.15em;
+  }
+}
+
 .nav-link {
   font-size: inherit;
   letter-spacing: 0.08em;

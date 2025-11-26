@@ -22,7 +22,11 @@
     {{- $page := .page }}
     {{- $menuID := .menuID }}
     {{- range .menuEntries }}
-      {{- $attrs := dict "href" .URL }}
+      {{- $url := .URL }}
+      {{- if not (or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://") ) }}
+        {{- $url = $url | relLangURL }}
+      {{- end }}
+      {{- $attrs := dict "href" $url }}
       {{- $name := .Name }}
       {{- with .Identifier }}
         {{- with T . }}

@@ -42,7 +42,7 @@
             <article class="not-prose flex cursor-pointer flex-col space-y-4 rounded-lg border border-transparent p-6 transition-all duration-150 hover:border-white">
               <h2 class="text-xl font-semibold">
                 <span class="text-white flex items-center">
-                  {{ with $icon }}<img src="{{ . }}" alt="" class="mr-2">{{ end }}
+                  {{ with $icon }}<img src="{{ . | relURL }}" alt="" class="mr-2">{{ end }}
                   {{ .LinkTitle }}
                 </span>
               </h2>
