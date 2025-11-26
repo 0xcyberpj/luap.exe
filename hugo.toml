@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'luap.exe'
 theme='digio'
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
