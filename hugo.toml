@@ -1,0 +1,27 @@
+baseURL = 'https://notes.luap.exe/'
+languageCode = 'en-us'
+title = 'luap.exe'
+theme='digio'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = '/luap.exe'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = '/nevermind'
+    url = '/write/'
+    weight = 2
+  [[menu.main]]
+    name = '/security'
+    url = '/open-source/'
+    weight = 3
+  [[menu.main]]
+    name = '/ping'
+    url = '/contact/'
+    weight = 4

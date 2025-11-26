@@ -1,0 +1,8 @@
+/public/
+/resources/
+/node_modules/
+*.log
+.hugo_build.lock
+/themes/digio/node_modules/
+.DS_Store
+
