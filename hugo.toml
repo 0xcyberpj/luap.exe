@@ -1,5 +1,4 @@
 baseURL = 'https://cyberpj.is-a.dev/luap.exe/'
-relativeURLs = true
 languageCode = 'en-us'
 title = 'luap.exe'
 theme='digio'
