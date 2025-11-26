@@ -173,6 +173,12 @@ nav ul li::before {
 
 .nav-top {
   width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav-top::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-menu {
