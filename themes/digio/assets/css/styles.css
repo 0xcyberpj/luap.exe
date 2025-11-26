@@ -1,0 +1,281 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html {
+  background-color: #050505;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #ffffff;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  font-size: 14px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(60, 255, 188, 0.04), transparent 40%),
+    radial-gradient(circle at 88% 12%, rgba(140, 90, 255, 0.05), transparent 38%),
+    radial-gradient(circle at 65% 82%, rgba(35, 255, 166, 0.035), transparent 42%);
+  background-color: #040404;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: 1rem;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-top: 1px solid #333333;
+  background: none;
+}
+
+.toc-container {
+  position: sticky;
+  top: 2rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .toc-container {
+    display: none;
+  }
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-image: url('/checkbox.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 4px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-image: url('/checked.png');
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 8px;
+  height: 8px;
+  background-image: url('/sparkle.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* hides sparkle bullets for checkbox lists */
+ul li:has(input[type="checkbox"]) {
+  padding-left: 0;
+}
+
+ul li:has(input[type="checkbox"])::before {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li::before {
+  display: none;
+}
+
+.nav-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.nav-top {
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.nav-link {
+  font-size: inherit;
+  letter-spacing: 0.08em;
+  color: #f4f4f2;
+  position: relative;
+  padding-bottom: 0.3rem;
+  transition: color 150ms ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(183,255,142,0.12), rgba(122,255,215,0.6), rgba(183,255,142,0.12));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #aaf8ff;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link--active::after {
+  transform: scaleX(1);
+  background: linear-gradient(90deg, rgba(92,255,193,0.25), #7b7bff, rgba(92,255,193,0.25));
+}
+
+.nav-link--active {
+  color: #8efdc5;
+}
+
+.nav-link--music {
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  padding-bottom: 0;
+}
+
+.nav-link--music::after {
+  display: none;
+}
+
+.nav-tagline {
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  color: #f4f4f2;
+  margin-top: 0.5rem;
+}
+
+.nav-tagline__highlight {
+  margin-left: 0.35rem;
+  letter-spacing: 0.22em;
+  color: #ffffff;
+}
+
+.home-content {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.home-content h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.home-content ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.home-quotes {
+  border-left: 3px solid #2bffb3;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.home-quotes blockquote {
+  margin: 0;
+  font-style: italic;
+  color: #f0fdf4;
+}
+
